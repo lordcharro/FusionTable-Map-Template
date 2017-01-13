@@ -12,8 +12,8 @@
 * RESTful URLs for sharing searches
 * ability to easily add additional search filters (checkboxes, sliders, etc)
 * mobile and tablet friendly using responsive design
-* built with HTML, CSS and Javascript - no server side code required
-  
+* built with HTML, CSS and Javascript
+
 ## Dependencies
 
 * [Google Fusion Tables](http://www.google.com/fusiontables/Home)
@@ -22,17 +22,12 @@
 * [jQuery Address](https://github.com/asual/jquery-address)
 * [Bootstrap 3.2.0](http://getbootstrap.com/)
 
-## Contributors 
+## Contributors
 
 * [Ivo Lopes](http://charro.pancakeapps.com/) - primary contributor
 
 ## Copyright and attribution
 
 Copyright (c) 2015 Derek Eder. Released under the MIT License.
-
-```html
-<a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> 
-by <a href='http://derekeder.com'>Derek Eder</a>.
-```
 
 See [LICENSE](https://github.com/derekeder/FusionTable-Map-Template/blob/master/LICENSE) for more details.
