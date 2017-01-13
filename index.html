@@ -58,6 +58,7 @@
               </label>
             </p>
 
+            <!--Start of section search Ivo-->
             <br />
             <h4>
               Operators Filters
@@ -86,6 +87,50 @@
               </li>
             </ul>
 
+          </br>
+            <h4>
+              Search Site ID
+            </h4>
+            <input class='form-control' id='text_search' placeholder="Enter a site ID" type='text' />
+
+          <br />
+            <h4>
+              Canton
+            </h4>
+            <label>
+              <select id='select_type'>
+                <option value=''>Any location type</option>
+                <option value='Geneve'>Geneve</option>
+                <option value='Vaud'>Vaud</option>
+                <option value='Bern'>Bern</option>
+                <option value='Neuchatel'>Neuchatel</option>
+              </select>
+            </label>
+
+          <br />
+          
+            <h4>
+              Type of project
+            </h4>
+            <ul class='inputs-list unstyled'>
+              <li>
+                <label class='checkbox inline'>
+                  <input type='checkbox' id='tpType1' />
+                  <span class='filter-box filter-blue'></span>
+                  NewSite
+                </label>
+              </li>
+              <li>
+                <label class='checkbox inline'>
+                  <input type='checkbox' id='tpType2' />
+                  <span class='filter-box filter-red'></span>
+                  Upgrade
+                </label>
+              </li>
+            </ul>
+
+            <!--End of section search Ivo-->
+
             <br />
             <a class='btn btn-primary' id='search' href='#'>
               <i class='glyphicon glyphicon-search'></i>
@@ -107,7 +152,7 @@
           </noscript>
           <div id='map_canvas'></div>
           <p class='pull-right'>
-            <a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> by <a href='http://derekeder.com'>Derek Eder</a>.
+            <a href='https://github.com/lordcharro/FusionTable-Map-Template/'>Fusion Table Map Template</a> by <a href='http://charro.pancakeapps.com/'>Ivo Lopes</a>.
         </p>
         </div>
       </div>

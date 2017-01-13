@@ -164,12 +164,29 @@
 
         //-----custom filters-----
 
+        //Operator search
         var type_column = "'operator'";
         var tempWhereClause = [];
         if ( $("#cbType1").is(':checked')) tempWhereClause.push("Swiss");
         if ( $("#cbType2").is(':checked')) tempWhereClause.push("Sel");
         if ( $("#cbType3").is(':checked')) tempWhereClause.push("Soleil");
         self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
+
+        //Site ID search
+        var text_search = $("#text_search").val().replace("'", "\\'");
+        if (text_search != '')
+          self.whereClause += " AND 'Site ID' contains ignoring case '" + text_search + "'";
+
+        //Canton search
+        if ( $("#select_type").val() != "")
+          self.whereClause += " AND 'Canton' = '" + $("#select_type").val() + "'";
+
+        //Type of project search
+        var type_column2 = "'Type of project'";
+        var tempWhereClause2 = [];
+        if ( $("#tpType1").is(':checked')) tempWhereClause2.push("NewSite");
+        if ( $("#tpType2").is(':checked')) tempWhereClause2.push("Upgrade");
+        self.whereClause += " AND " + type_column2 + " IN ('" + tempWhereClause2.join("','") + "')";
 
         //-----end of custom filters-----
 
