@@ -172,6 +172,16 @@
         if ( $("#cbType3").is(':checked')) tempWhereClause.push("Soleil");
         self.whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
 
+        //Friendly search
+        var type_column3 = "'Prospect name'";
+        var tempWhereClause3 = [];
+        if ( $("#fsType0").is(':checked')) tempWhereClause3.push("");
+        if ( $("#fsType1").is(':checked')) tempWhereClause3.push("Friend1");
+        if ( $("#fsType2").is(':checked')) tempWhereClause3.push("Friend2");
+        if ( $("#fsType3").is(':checked')) tempWhereClause3.push("Friend3");
+        if ( $("#fsType4").is(':checked')) tempWhereClause3.push("Friend4");
+        self.whereClause += " AND " + type_column3 + " IN ('" + tempWhereClause3.join("','") + "')";
+
         //Site ID search
         var text_search = $("#text_search").val().replace("'", "\\'");
         if (text_search != '')
@@ -187,6 +197,14 @@
         if ( $("#tpType1").is(':checked')) tempWhereClause2.push("NewSite");
         if ( $("#tpType2").is(':checked')) tempWhereClause2.push("Upgrade");
         self.whereClause += " AND " + type_column2 + " IN ('" + tempWhereClause2.join("','") + "')";
+
+        //Site responsible search
+        var type_columnSR = "'Site responsible'";
+        var tempWhereClauseSR = [];
+        if ( $("#srType1").is(':checked')) tempWhereClauseSR.push("M");
+        if ( $("#srType2").is(':checked')) tempWhereClauseSR.push("Y");
+        if ( $("#srType3").is(':checked')) tempWhereClauseSR.push("J");
+        self.whereClause += " AND " + type_columnSR + " IN ('" + tempWhereClauseSR.join("','") + "')";
 
         //-----end of custom filters-----
 
